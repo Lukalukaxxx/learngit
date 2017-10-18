@@ -37,11 +37,15 @@ def calc():
 		if (len(test) < 1): continue
 		if(c == 'over'):
 			print("The sum is: ", sum)
-		else:
+			break
+		elif(c == 'buy'):
 			_id = int(test[1]); _number = int(test[2]);
 			if _id in list1.keys():
 				sum = sum + list1[_id].price * _number
 			else: print("Can't find the commodity!")
+		else:
+			print("Your input is wrong!")
+			continue
 	return
 
 def main():
